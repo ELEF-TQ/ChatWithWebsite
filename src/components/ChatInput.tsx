@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button, Textarea } from "@nextui-org/react";
 import { type useChat } from "ai/react";
@@ -16,13 +16,11 @@ interface ChatInputProps {
 }
 
 export const ChatInput = ({ handleInputChange, handleSubmit, input, setInput }: ChatInputProps) => {
- 
   return (
-    <div className="z-10 bg-zinc-900 absolute bottom-0 left-0 w-full">
-    <div className="mx-2 flex flex-row gap-3 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
-      <div className="relative flex h-full flex-1 items-stretch md:flex-col">
-        <div className="relative flex flex-col w-full flex-grow p-4">
-          <form onSubmit={handleSubmit} className="relative">
+    <div className="absolute bottom-0 left-0 w-full bg-zinc-900 z-10">
+      <div className="flex flex-row gap-3 mx-2 md:mx-4 lg:mx-auto lg:max-w-2xl xl:max-w-3xl md:last:mb-6">
+        <div className="flex flex-1 items-stretch relative h-full">
+          <form onSubmit={handleSubmit} className="flex flex-col flex-grow w-full p-4">
             <Textarea
               minRows={4}
               autoFocus
@@ -42,16 +40,15 @@ export const ChatInput = ({ handleInputChange, handleSubmit, input, setInput }: 
             <Button
               size="sm"
               type="submit"
-              className="absolute z-10 border border-border bg-zinc-900 right-2 bottom-2"
+              className="absolute right-2 bottom-2 z-10 border border-border bg-zinc-900"
             >
-              <Send className="size-4" />
+              <Send className="w-4 h-4" />
             </Button>
           </form>
         </div>
       </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default ChatInput
+export default ChatInput;
