@@ -1,3 +1,4 @@
+import ChatWrapper from "@/components/ChatWrapper";
 import { ragChat } from "@/lib/rag-chat";
 import { redis } from "@/lib/redis";
 import { PageProps } from "@/types/PageProps";
@@ -11,7 +12,6 @@ const Page = async ({ params }: PageProps) => {
   try {
     // Check if the URL is already indexed
     const isAlreadyIndexed = await redis.sismember("indexed-urls", reconstructedUrl);
-
     if (!isAlreadyIndexed) {
       // Configure Upstash VectorDB
       await ragChat.context.add({
@@ -25,14 +25,14 @@ const Page = async ({ params }: PageProps) => {
     }
   } catch (error) {
     console.error("Error handling page:", error);
-   
   }
 
-  return (
-    <div>
-     hello
-    </div>
-  );
+  // sessions
+  const sessionId = "mock-session"
+  const initialMMessages = await ragChat.history.getMessages({ amount: 10, sessionId });
+
+
+  return  <ChatWrapper sessionId={sessionId} initialMessages={initialMMessages} />;
 };
 
 export default Page;
