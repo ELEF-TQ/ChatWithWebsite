@@ -48,6 +48,7 @@ You can set these environment variables in a `.env` file at the root of your pro
 
 ## Demo video
 
+https://github.com/user-attachments/assets/ae6425e7-7e3f-411f-bfb7-c740755ff09a
 
 
 
