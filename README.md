@@ -1,37 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RAG Application : ChatWithWebsite
 
-## Getting Started
+## Overview
+ChatWithWebsite is a dynamic web application that enables users to interact with websites via a chat interface. By appending a website link to localhost:3000, users can query and receive AI-generated responses based on the website's content. This application integrates advanced AI technologies to provide relevant and contextually accurate information.
 
-First, run the development server:
+## Features
+- **Interactive Chat:**: Users can ask questions about the content of any website.
+- **AI-Driven Responses**: Provides accurate and contextually relevant information based on the website's content.
+- **User-Friendly Interface:**: Simple and intuitive chat experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
+- **Next.js**:  Framework for server-rendered React applications.
+- **AI SDK(meta-llama/Meta-Llama-3-8B-Instruct):**: For generating AI-driven responses.
+- **Upstash**: For vector storage and retrieval.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
+To run this project locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/chatwithwebsite.git
+    cd chatwithwebsite
+    ```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+    ```bash
+   yarn install
+    ```
+    
+3. **Start the development server**:
+    ```bash
+   yarn dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration
+Ensure you have the following environment variables set up:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `UPSTASH_VECTOR_REST_URL`: Your Upstash Vector REST API URL.
+- `UPSTASH_VECTOR_REST_TOKEN`: Your Upstash Vector REST API Token.
+- `QSTASH_TOKEN`: Your QStash API Token.
+- `UPSTASH_REDIS_REST_TOKEN`: Your Upstash Redis REST API Token.
+- `UPSTASH_REDIS_REST_URL`: Your Upstash Redis REST API URL.
 
-## Deploy on Vercel
+You can set these environment variables in a `.env` file at the root of your project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Chat_With_Ur_Websites
+## Demo video
+
+
+
+
