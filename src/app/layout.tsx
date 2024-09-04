@@ -7,7 +7,7 @@ import { cn } from "@nextui-org/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chat-Web",
+  title: "ChatWithWebsite",
   description: "AI tool to retrive informations from websites",
 };
 
